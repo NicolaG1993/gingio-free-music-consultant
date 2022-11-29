@@ -41,7 +41,7 @@ export default function Home() {
                     </div>
 
                     <div className={styles.copyrights}>
-                        <p>c 2022 GINGIO, Privacy Policy</p>
+                        <p>© 2022 GINGIO, Privacy Policy</p>
                     </div>
                 </div>
             </section>

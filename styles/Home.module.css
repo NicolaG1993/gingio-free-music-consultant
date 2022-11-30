@@ -6,15 +6,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.7s ease;
 }
 
-.section {
-    height: 100vh;
+.section,
+.smallSection {
     width: 100%;
     /* border-bottom: 1px solid rgb(138, 138, 138); */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.section {
+    height: 100vh;
 }
 
 #Home {
@@ -22,6 +26,7 @@
     background-position: left;
     background-size: cover;
     position: relative;
+    height: 102vh;
 }
 
 #Home > .content {
@@ -32,12 +37,18 @@
     top: 0;
     left: 0;
     background: linear-gradient(
+        180deg,
+        rgba(1, 1, 1, 0) 96%,
+
+        rgba(1, 1, 1, 1) 99%
+    );
+    /* background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 1) 0%,
         rgba(0, 0, 0, 0) 50%,
 
         rgba(0, 0, 0, 1) 100%
-    );
+    ); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,6 +62,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* max-height: 66vh; */
 }
 
 #Home > .content > div > div:nth-child(1) > img {
@@ -62,14 +74,14 @@
     margin: 10px 0;
 }
 
-#Home > .content > div > div:nth-child(1) > a {
+#Home .navLink {
     cursor: pointer;
     font-size: 1.7em;
     margin: 10px 0 0 0;
 }
-#Home > .content > div > div:nth-child(1) > a:hover {
+#Home .navLink:hover {
 }
-#Home > .content > div > div:nth-child(1) > a::after {
+#Home .navLink::after {
     content: "";
     display: block;
     height: 3px;
@@ -78,37 +90,48 @@
     transition: 0.5s ease-out;
     margin-top: 5px;
 }
-#Home > .content > div > div:nth-child(1) > a:hover:after {
+#Home .navLink:hover:after {
     width: 100%;
 }
-
-#Home > .content > div > div:nth-child(1) > a:nth-child(3) {
+#Home .navLink:nth-child(3) {
     font-weight: bold;
 }
 
 #Home > .content > div > div:nth-child(1) > span {
     font-size: 1em;
-    margin: 120px 0 10px 0;
+    /* margin: 120px 0 10px 0; */
+    margin-top: auto;
 }
 
 #Home > .content > div > div:nth-child(2) {
-    min-width: 250px;
+    /* min-width: 250px; */
     display: flex;
     flex-direction: column-reverse;
+    min-height: 89vh;
 }
 .chat {
-    width: 100%;
-    border-radius: 40px;
+    /* width: 100%; */
+    border-radius: 80px;
     background-color: rgb(5, 188, 5);
-    padding: 10px 20px;
-    font-size: 1.7rem;
+    padding: 8px;
+    /* font-size: 1.2rem; */
     cursor: pointer;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.3s ease;
 }
 .chat:hover {
-    background-color: rgb(7, 158, 7);
+    background-color: rgb(0, 211, 0);
+}
+.chat > p {
+    margin: 0 0.5rem;
+}
+.chat:hover > p {
+    /* border-bottom: 2px solid white; */
 }
 
 .copyrights > p {
@@ -130,13 +153,58 @@
 }
 
 /* SECTION 3 */
+
+.donations {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* OVER SECTION - ABOUT US */
+
+#OverSection {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgba(1, 1, 1, 1);
+    transition: 0.7s ease;
+    /* transform: translateX(100%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 6rem;
+}
+#OverSection > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    height: 100px;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+#OverSection > div:nth-child(1) > div:nth-child(1) {
+    height: 100px;
+    width: 180px;
+    background: white;
+}
+#OverSection > div:nth-child(1) > span:nth-child(2) {
+    cursor: pointer;
+    font-weight: bold;
+}
+#OverSection > div:nth-child(1) > span:nth-child(2):hover {
+    border-bottom: 2px solid white;
+}
+
 .about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 6rem;
     text-align: justify;
+    max-width: 1280px;
 }
 .about > h3 {
     margin: 0 0 60px 0;
@@ -146,4 +214,14 @@
 }
 .about > p {
     font-size: 1.2em;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 1280px) {
+    #Home > .content > div > div:nth-child(2) {
+        min-height: 93vh;
+    }
+}
+@media screen and (max-width: 720px) {
 }

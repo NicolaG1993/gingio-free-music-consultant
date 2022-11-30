@@ -179,21 +179,46 @@
 .brandMission > p:nth-child(1) {
     font-size: 2.3em;
     transition: 1.2s ease-out;
-    transition-delay: 0.8s;
+    transition-delay: 0.4s;
     margin-bottom: 1rem;
 }
 .brandMission > p:nth-child(2) {
     transition: 0.8s ease-out;
-    transition-delay: 2s;
+    transition-delay: 1.6s;
 }
 
 /* SECTION 3 */
 
 .donations {
-    height: 450px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.donations > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    /* text-align: justify; */
+    /* letter-spacing: 1px; */
+}
+
+.donations > div > a {
+    /* padding: 10px;
+    border: 1px solid white; */
+    margin-left: 2rem;
+    position: relative;
+    height: 90px;
+    width: 100%;
+    transition: 0.5s ease;
+}
+.donations > div > a:hover {
+    height: 85px;
 }
 
 /* OVER SECTION - ABOUT US */

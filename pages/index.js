@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import whatsAppLogo from "../public/assets/WhatsApp.webp";
+import payPalLogo from "../public/assets/Paypal.png";
 
 export default function Home({ scrollTop, width, height, isSmallDevice }) {
     const [animationReady, setAnimationReady] = useState(false);
@@ -130,7 +131,10 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             </div>
 
                             <div>
-                                <div
+                                <a
+                                    href="https://wa.me/41792403054"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={styles.chat}
                                     onMouseEnter={() => setChatButton(true)}
                                     onMouseLeave={() => setChatButton(false)}
@@ -169,7 +173,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                         height="60"
                                         alt="WhatsApp Logo"
                                     />
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -198,16 +202,19 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                 Please donate in order to keep our free service
                                 active for the ones in need
                             </p>
-                            <p>pic</p>
-                        </div>
 
-                        <div>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href="https://www.paypal.com/donate/?hosted_button_id=RDC639FH4EJDN"
                             >
-                                PAYPAL
+                                {/* PAYPAL */}
+                                <Image
+                                    src={payPalLogo}
+                                    layout="fill"
+                                    objectFit="contain"
+                                    alt="PayPal Logo"
+                                />
                             </a>
                         </div>
                     </div>
@@ -219,8 +226,8 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                 id={styles.OverSection}
                 style={
                     overSection
-                        ? { transform: "translateX(0)" }
-                        : { transform: "translateX(100%)" }
+                        ? { transform: "translateX(0)", opacity: "1" }
+                        : { transform: "translateX(100%)", opacity: "1" }
                 }
             >
                 <div>

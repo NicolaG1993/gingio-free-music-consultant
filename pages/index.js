@@ -1,11 +1,75 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import whatsAppLogo from "../public/assets/WhatsApp.webp";
 
-export default function Home() {
+export default function Home({ scrollTop, width, height, isSmallDevice }) {
+    const [animationReady, setAnimationReady] = useState(false);
     const [overSection, setOverSection] = useState(false);
+    const [chatButton, setChatButton] = useState(false);
+
+    const [heading1Style, setHeading1Style] = useState(
+        "heading-from-right-before"
+    );
+    const [heading2Style, setHeading2Style] = useState(
+        "heading-fade-in-before"
+    );
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnimationReady(true);
+        }, 1500);
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        // INTERSECTION OBSERVER STUFF
+        const io = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        if (i === 0) {
+                            setHeading1Style("heading-from-right-after");
+                        }
+                        if (i === 1) {
+                            setHeading2Style("heading-fade-in-after");
+                        }
+                    } else {
+                        return;
+                    }
+                });
+            },
+            {
+                threshold: [0],
+            }
+        );
+        // ELEMENTS TO OBSERVE
+        const heading1 = document.querySelector("#heading1");
+        const heading2 = document.querySelector("#heading2");
+        // START OBSERVING ELEMENTS
+        io.observe(heading1);
+        io.observe(heading2);
+    }, [scrollTop]);
+
+    const renderAnimationA = animationReady
+        ? {
+              transform: "translateX(0)",
+              opacity: "1",
+          }
+        : {
+              transform: "translateX(-50%)",
+              opacity: "0",
+          };
+    const renderAnimationB = animationReady
+        ? {
+              transform: "translateY(0)",
+              opacity: "1",
+          }
+        : {
+              transform: "translateY(-50px)",
+              opacity: "0",
+          };
 
     return (
         <>
@@ -35,8 +99,13 @@ export default function Home() {
                                     width="240"
                                     height="100"
                                     alt="logo"
+                                    className={styles.logo}
+                                    style={renderAnimationA}
                                 />
-                                <p>
+                                <p
+                                    className={styles.description}
+                                    style={renderAnimationB}
+                                >
                                     Local and Global FREE First Class Music
                                     Consulting for Artists and music
                                     Enterpreneurs.
@@ -44,21 +113,56 @@ export default function Home() {
                                 <p
                                     onClick={() => setOverSection("about")}
                                     className={styles.navLink}
+                                    style={renderAnimationB}
                                 >
                                     ABOUT US
                                 </p>
                                 <p
                                     onClick={() => setOverSection("disclaimer")}
                                     className={styles.navLink}
+                                    style={renderAnimationB}
                                 >
                                     Disclaimer
                                 </p>
-                                <span>POWERED BY GINGIO</span>
+                                <span style={renderAnimationA}>
+                                    POWERED BY GINGIO
+                                </span>
                             </div>
 
                             <div>
-                                <div className={styles.chat}>
-                                    <p>Chat with us!</p>
+                                <div
+                                    className={styles.chat}
+                                    onMouseEnter={() => setChatButton(true)}
+                                    onMouseLeave={() => setChatButton(false)}
+                                    style={renderAnimationA}
+                                >
+                                    <div
+                                        className={styles.popout}
+                                        style={
+                                            chatButton
+                                                ? { width: "120px" }
+                                                : { width: "0" }
+                                        }
+                                    >
+                                        <p
+                                            style={
+                                                chatButton
+                                                    ? {
+                                                          opacity: "1",
+                                                          transform:
+                                                              "translateX(0)",
+                                                      }
+                                                    : {
+                                                          opacity: "0",
+                                                          transform:
+                                                              "translateX(100%)",
+                                                      }
+                                            }
+                                        >
+                                            Chat with us!
+                                        </p>
+                                    </div>
+
                                     <Image
                                         src={whatsAppLogo}
                                         width="60"
@@ -77,21 +181,35 @@ export default function Home() {
 
                 <section className={styles.section}>
                     <div className={styles.brandMission}>
-                        <p>
+                        <p id="heading1" className={heading1Style}>
                             Unify dreams and reality, connect yourself globally
                             to
                         </p>
-                        <p> BE MORE!</p>
+                        <p id="heading2" className={heading2Style}>
+                            BE MORE!
+                        </p>
                     </div>
                 </section>
 
                 <section className={styles.smallSection}>
                     <div className={styles.donations}>
-                        <p>
-                            Please donate in order to keep our free service
-                            active for the ones in need
-                        </p>
-                        <p>pic</p>
+                        <div>
+                            <p>
+                                Please donate in order to keep our free service
+                                active for the ones in need
+                            </p>
+                            <p>pic</p>
+                        </div>
+
+                        <div>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://www.paypal.com/donate/?hosted_button_id=RDC639FH4EJDN"
+                            >
+                                PAYPAL
+                            </a>
+                        </div>
                     </div>
                 </section>
             </main>

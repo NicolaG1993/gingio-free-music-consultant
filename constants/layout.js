@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header/Header";
+import useWindowDimensions from "../utils/useWindowDimensions";
+import useScrollPosition from "../utils/useScrollPosition";
 
 import {
     useEffect,
@@ -10,6 +12,47 @@ import {
 } from "react";
 
 export default function Layout({ children, ...pageProps }) {
+    const { width, height } = useWindowDimensions();
+    const { scrollTop } = useScrollPosition();
+    const [isSmallDevice, setIsSmallDevice] = useState(false);
+    useEffect(
+        () => (width > 550 ? setIsSmallDevice(false) : setIsSmallDevice(true)),
+        [width]
+    );
+
+    // Passing props form Layout to children component:
+    //Create recursive Map on children.
+    function recursiveMap(children, fn) {
+        return Children.map(children, (child) => {
+            if (!isValidElement(child) || typeof child.type == "string") {
+                return child;
+            }
+
+            if (child.props.children) {
+                child = cloneElement(child, {
+                    children: recursiveMap(child.props.children, fn),
+                });
+            }
+
+            return fn(child);
+        });
+    }
+    // Add props to all child elements.
+    const childrenWithProps = recursiveMap(children, (child) => {
+        // Checking isValidElement is the safe way and avoids a TS error too.
+        if (isValidElement(child)) {
+            // Pass additional props here
+            return cloneElement(child, {
+                scrollTop: scrollTop,
+                width: width,
+                height: height,
+                isSmallDevice: isSmallDevice,
+            });
+        }
+
+        return child;
+    });
+
     return (
         <>
             <Head>
@@ -58,7 +101,7 @@ export default function Layout({ children, ...pageProps }) {
 
             <Header />
 
-            {children}
+            {childrenWithProps}
         </>
     );
 }

@@ -7,6 +7,7 @@ body {
     color: white;
     background: rgb(1, 1, 1);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 a {
@@ -25,4 +26,22 @@ p {
 
 * {
     box-sizing: border-box;
+}
+
+/* ANIMATIONS */
+.heading-from-right-before {
+    transform: translateX(80px);
+    opacity: 0;
+}
+.heading-from-right-after {
+    transform: translateX(0px);
+    opacity: 1;
+}
+.heading-fade-in-before {
+    font-size: 4em;
+    opacity: 0;
+}
+.heading-fade-in-after {
+    font-size: 2.3em;
+    opacity: 1;
 }

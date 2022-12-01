@@ -10,7 +10,7 @@ import fmcLogoWhite from "../public/assets/logo-white.png";
 export default function Home({ scrollTop, width, height, isSmallDevice }) {
     const [animationReady, setAnimationReady] = useState(false);
     const [overSection, setOverSection] = useState(false);
-    const [chatButton, setChatButton] = useState(true);
+    const [chatButton, setChatButton] = useState(false);
 
     const [heading1Style, setHeading1Style] = useState(
         "heading-from-right-before"
@@ -99,8 +99,8 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             <div>
                                 <Image
                                     src={"/assets/logo.png"}
-                                    width="240"
-                                    height="95"
+                                    width="180"
+                                    height="70"
                                     alt="logo"
                                     className={styles.logo}
                                     style={renderAnimationA}
@@ -159,7 +159,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                             className={styles.popout}
                                             style={
                                                 chatButton
-                                                    ? { width: "125px" }
+                                                    ? { width: "135px" }
                                                     : { width: "0" }
                                             }
                                         >
@@ -184,8 +184,8 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
 
                                         <Image
                                             src={whatsAppLogo}
-                                            width="60"
-                                            height="60"
+                                            width="40"
+                                            height="40"
                                             alt="WhatsApp Logo"
                                         />
                                     </a>

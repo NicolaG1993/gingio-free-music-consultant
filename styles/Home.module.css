@@ -36,12 +36,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(
+    /* background: linear-gradient(
         180deg,
         rgba(1, 1, 1, 0) 96%,
 
         rgba(1, 1, 1, 1) 99%
-    );
+    ); */
     /* background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 1) 0%,
@@ -212,7 +212,7 @@
     height: 400px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     padding: 2rem;
 }
@@ -223,6 +223,8 @@
     align-items: center;
     width: 100%;
     max-width: 500px;
+    margin-top: 2rem;
+    height: 90px;
     /* text-align: justify; */
     /* letter-spacing: 1px; */
 }

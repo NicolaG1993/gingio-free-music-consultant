@@ -134,12 +134,18 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                         style={renderAnimationA}
                                     >
                                         POWERED BY
-                                        <Image
-                                            src={gingioLogo}
-                                            width="auto"
-                                            height="20"
-                                            alt="Gingio Logo"
-                                        />
+                                        <a
+                                            href="https://www.gingio.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Image
+                                                src={gingioLogo}
+                                                width="auto"
+                                                height="20"
+                                                alt="Gingio Logo"
+                                            />
+                                        </a>
                                     </span>
                                 </div>
                             </div>
@@ -147,7 +153,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             <div>
                                 <div>
                                     <a
-                                        href="https://wa.me/13102806893 "
+                                        href="https://wa.me/13102806893"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.chat}
@@ -231,7 +237,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://www.paypal.com/donate/?hosted_button_id=RDC639FH4EJDN"
+                                href="https://www.paypal.com/donate/?hosted_button_id=GFBJBUMRCRPYN"
                             >
                                 {/* PAYPAL */}
                                 <Image
@@ -264,15 +270,17 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             // layout="fill"
                             // objectFit="contain"
                             alt="logo"
+                            onClick={() => setOverSection(false)}
                         />
                     </div>
-                    <span onClick={() => setOverSection(false)}>Close</span>
+                    {/* <span onClick={() => setOverSection(false)}>Close</span> */}
                 </div>
 
                 <div className={styles.about}>
                     {overSection === "about" && (
                         <>
-                            <h3>ABOUT US</h3>
+                            {/* <h3>ABOUT US</h3> */}
+
                             <p>
                                 CEO and Creative Designer Jannik Olander was
                                 born in the small country of Denmark. Though

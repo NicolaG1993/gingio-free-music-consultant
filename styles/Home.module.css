@@ -72,6 +72,9 @@
     height: 100%;
 
     /* position: relative; */
+    background: rgba(78, 78, 78, 0.342);
+    border-radius: 12px;
+    padding: 1rem;
 }
 
 .logo {
@@ -150,7 +153,7 @@
     align-items: center;
     font-size: 0.9em;
     /* margin: 120px 0 10px 0; */
-    margin: 0.3rem 0 2rem 0;
+    margin: 0.3rem 0 0rem 0;
     padding-bottom: 2px;
     /* margin-top: auto; */
     transition: 0.8s ease-out;
@@ -281,11 +284,12 @@
     align-items: center;
     justify-content: flex-start;
     /* padding: 2rem 6rem; */
-    padding: 3rem 6rem 4rem 6rem;
+    padding: 5rem 6rem 4rem 6rem;
 }
 #OverSection > div:nth-child(1) {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     /* flex-direction: row-reverse; */
     /* height: 100px; */
@@ -294,8 +298,9 @@
 }
 #OverSection > div:nth-child(1) > div:nth-child(1) {
     height: 50px;
-    width: 180px;
+    /* width: 180px; */
     position: relative;
+    cursor: pointer;
     /* background: white; */
 }
 #OverSection > div:nth-child(1) > span:nth-child(2) {

@@ -109,9 +109,8 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                     className={styles.description}
                                     style={renderAnimationB}
                                 >
-                                    Local and Global FREE First Class Music
-                                    Consulting for Artists and music
-                                    Enterpreneurs
+                                    FREE First Class Music Consulting for
+                                    Artists and music Enterpreneurs
                                 </p>
                                 <p
                                     onClick={() => setOverSection("about")}

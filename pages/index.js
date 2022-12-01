@@ -129,67 +129,74 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             </div>
 
                             <div>
-                                <span
-                                    className={styles.poweredBy}
-                                    style={renderAnimationA}
-                                >
-                                    POWERED BY
-                                    <Image
-                                        src={gingioLogo}
-                                        width="auto"
-                                        height="23"
-                                        alt="Gingio Logo"
-                                    />
-                                </span>
-
-                                <a
-                                    href="https://wa.me/13102806893 "
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.chat}
-                                    onMouseEnter={() => setChatButton(true)}
-                                    onMouseLeave={() => setChatButton(false)}
-                                    style={renderAnimationA}
-                                >
-                                    <div
-                                        className={styles.popout}
-                                        style={
-                                            chatButton
-                                                ? { width: "120px" }
-                                                : { width: "0" }
-                                        }
+                                <div>
+                                    <span
+                                        className={styles.poweredBy}
+                                        style={renderAnimationA}
                                     >
-                                        <p
+                                        POWERED BY
+                                        <Image
+                                            src={gingioLogo}
+                                            width="auto"
+                                            height="20"
+                                            alt="Gingio Logo"
+                                        />
+                                    </span>
+
+                                    <a
+                                        href="https://wa.me/13102806893 "
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.chat}
+                                        onMouseEnter={() => setChatButton(true)}
+                                        onMouseLeave={() =>
+                                            setChatButton(false)
+                                        }
+                                        style={renderAnimationA}
+                                    >
+                                        <div
+                                            className={styles.popout}
                                             style={
                                                 chatButton
-                                                    ? {
-                                                          opacity: "1",
-                                                          transform:
-                                                              "translateX(0)",
-                                                      }
-                                                    : {
-                                                          opacity: "0",
-                                                          transform:
-                                                              "translateX(100%)",
-                                                      }
+                                                    ? { width: "120px" }
+                                                    : { width: "0" }
                                             }
                                         >
-                                            Chat with us!
-                                        </p>
-                                    </div>
+                                            <p
+                                                style={
+                                                    chatButton
+                                                        ? {
+                                                              opacity: "1",
+                                                              transform:
+                                                                  "translateX(0)",
+                                                          }
+                                                        : {
+                                                              opacity: "0",
+                                                              transform:
+                                                                  "translateX(100%)",
+                                                          }
+                                                }
+                                            >
+                                                Chat with us!
+                                            </p>
+                                        </div>
 
-                                    <Image
-                                        src={whatsAppLogo}
-                                        width="60"
-                                        height="60"
-                                        alt="WhatsApp Logo"
-                                    />
-                                </a>
+                                        <Image
+                                            src={whatsAppLogo}
+                                            width="60"
+                                            height="60"
+                                            alt="WhatsApp Logo"
+                                        />
+                                    </a>
+                                </div>
+
+                                <div className={styles.copyrights}>
+                                    <p>
+                                        © {new Date().getFullYear()} GINGIO,
+                                        Privacy Policy
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div className={styles.copyrights}>
-                            <p>© 2022 GINGIO, Privacy Policy</p>
                         </div>
                     </div>
                 </section>

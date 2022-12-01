@@ -30,7 +30,7 @@
 }
 
 #Home > .content {
-    padding: 2rem 3rem 3rem 3rem;
+    padding: 2rem 3rem 2rem 3rem;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -65,6 +65,7 @@
     flex-direction: column;
     align-items: flex-start;
     /* min-height: 82vh; */
+    letter-spacing: 0.8px;
 }
 
 .logo {
@@ -111,19 +112,23 @@
 }
 
 #Home > .content > div > div:nth-child(2) {
-    /* min-width: 250px; */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; */
+}
+#Home > .content > div > div:nth-child(2) > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-direction: column-reverse; */
-    /* min-height: 89vh; */
     width: 100%;
 }
 
 #Home .poweredBy {
     display: flex;
     align-items: center;
-    font-size: 1em;
+    font-size: 0.9em;
     /* margin: 120px 0 10px 0; */
     /* margin-top: auto; */
     transition: 0.8s ease-out;
@@ -184,7 +189,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 3rem;
     font-weight: lighter;
     letter-spacing: 1px;
 }
@@ -231,7 +236,7 @@
     transition: 0.5s ease;
 }
 .donations > div > a:hover {
-    height: 85px;
+    height: 80px;
 }
 
 /* OVER SECTION - ABOUT US */
@@ -296,5 +301,18 @@
         padding: 3rem 3rem 4rem 3rem;
     }
 }
+
+@media screen and (max-width: 1279px) {
+    #Home > .content > div > div:nth-child(1) > p {
+        font-size: 1.2em;
+    }
+    #Home .poweredBy {
+        font-size: 0.8em;
+    }
+    .copyrights > p {
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (max-width: 720px) {
 }

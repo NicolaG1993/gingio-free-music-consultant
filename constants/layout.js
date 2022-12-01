@@ -110,9 +110,9 @@ export default function Layout({ children, ...pageProps }) {
                         This website uses essential cookies to improve the user
                         experience.
                     </p>
-                    <button onClick={() => setCookiesConfirm(true)}>
+                    <span onClick={() => setCookiesConfirm(true)}>
                         I understand
-                    </button>
+                    </span>
                 </div>
             )}
         </>

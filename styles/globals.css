@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 html,
 body {
     padding: 0;
@@ -17,6 +20,8 @@ body {
 }
 main {
     width: 100vw;
+    /* font-family: "Nunito Sans"; */
+    font-family: "Montserrat";
 }
 
 a {
@@ -41,17 +46,39 @@ p {
 .cookieWrap {
     position: fixed;
     bottom: 0;
-    width: 50%;
+    /* width: 50%; */
+    max-width: 650px;
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: black;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
+    font-size: 0.9em;
 }
-.cookieWrap button {
+.cookieWrap span {
     cursor: pointer;
     margin-left: 1rem;
+    width: 130px;
+    height: 40px;
+    background: black;
+    color: white;
+
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.9em;
+    transition: 0.2s ease;
+    border: 2px solid white;
+}
+.cookieWrap span:hover {
+    /* background: rgb(184, 184, 184); */
+    background: white;
+    color: black;
+    /* text-decoration: underline; */
 }
 
 /* ANIMATIONS */
@@ -68,6 +95,6 @@ p {
     opacity: 0;
 }
 .heading-fade-in-after {
-    font-size: 2.3em;
+    font-size: 2.5em;
     opacity: 1;
 }

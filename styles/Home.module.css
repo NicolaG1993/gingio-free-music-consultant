@@ -49,23 +49,28 @@
 
         rgba(0, 0, 0, 1) 100%
     ); */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-}
-#Home > .content > div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+}
+#Home > .content > div {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100%; */
+    flex-grow: 1;
 }
 #Home > .content > div > div:nth-child(1) {
     max-width: 250px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     /* min-height: 82vh; */
     letter-spacing: 0.8px;
+    height: 100%;
+
     /* position: relative; */
 }
 
@@ -82,17 +87,24 @@
 }
 
 #Home .description {
-    margin: 2.5rem 0 4rem 0;
+    /* margin: 0 0 5rem 0; */
     transition: 0.5s ease-out;
     transition-delay: 0.7s;
 }
+#Home .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 #Home .navLink {
     cursor: pointer;
-    font-size: 1.7em;
-    margin: 0.5rem 0;
+    font-size: 1.2em;
+    margin: 0.2rem 0;
     transition: 0.5s ease-out;
     transition-delay: 1.2s;
 }
+
 #Home .navLink:hover {
 }
 #Home .navLink::after {
@@ -102,14 +114,18 @@
     width: 0%;
     background: white;
     transition: 0.5s ease-out;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 #Home .navLink:hover:after {
     width: 100%;
 }
-#Home .navLink:nth-child(3) {
+#Home .list > .navLink:nth-child(1) {
     font-weight: bold;
     transition-delay: 0.9s;
+}
+#Home .list > .navLink:nth-child(2) {
+    /* font-weight: bold; */
+    font-size: 1.1em;
 }
 
 #Home > .content > div > div:nth-child(2) {
@@ -134,7 +150,7 @@
     align-items: center;
     font-size: 0.9em;
     /* margin: 120px 0 10px 0; */
-    margin: 0.5rem 0;
+    margin: 0.3rem 0 2rem 0;
     padding-bottom: 2px;
     /* margin-top: auto; */
     transition: 0.8s ease-out;
@@ -183,6 +199,10 @@
     /* border-bottom: 2px solid white; */
 }
 
+.copyrights {
+    max-height: 15px;
+    flex-grow: 0;
+}
 .copyrights > p {
     width: 100%;
     text-align: center;
@@ -339,15 +359,15 @@
     .copyrights > p {
         font-size: 0.8em;
     }
-    .brandMission > p:nth-child(1) {
+    /* .brandMission > p:nth-child(1) {
         font-size: 1.4em;
-    }
+    } */
 }
 
 @media screen and (max-width: 960px) {
-    .brandMission > p:nth-child(1) {
+    /* .brandMission > p:nth-child(1) {
         font-size: 1.15em;
-    }
+    } */
 }
 @media screen and (max-width: 720px) {
 }

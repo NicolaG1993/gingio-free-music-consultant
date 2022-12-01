@@ -112,32 +112,36 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                     FREE First Class Music Consulting for
                                     Artists and music Enterpreneurs
                                 </p>
-                                <p
-                                    onClick={() => setOverSection("about")}
-                                    className={styles.navLink}
-                                    style={renderAnimationB}
-                                >
-                                    ABOUT US
-                                </p>
-                                <p
-                                    onClick={() => setOverSection("disclaimer")}
-                                    className={styles.navLink}
-                                    style={renderAnimationB}
-                                >
-                                    Disclaimer
-                                </p>
-                                <span
-                                    className={styles.poweredBy}
-                                    style={renderAnimationA}
-                                >
-                                    POWERED BY
-                                    <Image
-                                        src={gingioLogo}
-                                        width="auto"
-                                        height="20"
-                                        alt="Gingio Logo"
-                                    />
-                                </span>
+                                <div className={styles.list}>
+                                    <p
+                                        onClick={() => setOverSection("about")}
+                                        className={styles.navLink}
+                                        style={renderAnimationB}
+                                    >
+                                        ABOUT US
+                                    </p>
+                                    <p
+                                        onClick={() =>
+                                            setOverSection("disclaimer")
+                                        }
+                                        className={styles.navLink}
+                                        style={renderAnimationB}
+                                    >
+                                        Disclaimer
+                                    </p>
+                                    <span
+                                        className={styles.poweredBy}
+                                        style={renderAnimationA}
+                                    >
+                                        POWERED BY
+                                        <Image
+                                            src={gingioLogo}
+                                            width="auto"
+                                            height="20"
+                                            alt="Gingio Logo"
+                                        />
+                                    </span>
+                                </div>
                             </div>
 
                             <div>
@@ -188,14 +192,14 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                         />
                                     </a>
                                 </div>
-
-                                <div className={styles.copyrights}>
-                                    <p>
-                                        © {new Date().getFullYear()} GINGIO,
-                                        Privacy Policy
-                                    </p>
-                                </div>
                             </div>
+                        </div>
+
+                        <div className={styles.copyrights}>
+                            <p>
+                                © {new Date().getFullYear()} GINGIO, Privacy
+                                Policy
+                            </p>
                         </div>
                     </div>
                 </section>

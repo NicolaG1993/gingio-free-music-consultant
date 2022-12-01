@@ -20,7 +20,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setAnimationReady(true);
-        }, 1500);
+        }, 800);
         return () => clearTimeout(timer);
     }, []);
 
@@ -96,7 +96,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                         <div>
                             <div>
                                 <Image
-                                    src={"/assets/logo.jpeg"}
+                                    src={"/assets/logo.png"}
                                     width="240"
                                     height="100"
                                     alt="logo"
@@ -132,7 +132,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
 
                             <div>
                                 <a
-                                    href="https://wa.me/41792403054"
+                                    href="https://wa.me/13102806893 "
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={styles.chat}
@@ -186,9 +186,13 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                 <section className={styles.section}>
                     <div className={styles.brandMission}>
                         <p id="heading1" className={heading1Style}>
+                            Unify dreams and reality, connect yourself locally
+                            and globally to
+                        </p>
+                        {/* <p id="heading1" className={heading1Style}>
                             Unify dreams and reality, connect yourself globally
                             to
-                        </p>
+                        </p> */}
                         <p id="heading2" className={heading2Style}>
                             BE MORE!
                         </p>

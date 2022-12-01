@@ -15,11 +15,30 @@ export default function Layout({ children, ...pageProps }) {
     const { width, height } = useWindowDimensions();
     const { scrollTop } = useScrollPosition();
     const [isSmallDevice, setIsSmallDevice] = useState(false);
+    const [animationReady, setAnimationReady] = useState(false);
     const [cookiesConfirm, setCookiesConfirm] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnimationReady(true);
+        }, 5000);
+        return () => clearTimeout(timer);
+    }, []);
+
     useEffect(
         () => (width > 550 ? setIsSmallDevice(false) : setIsSmallDevice(true)),
         [width]
     );
+
+    const renderAnimation = animationReady
+        ? {
+              transform: "translateY(0)",
+              opacity: "1",
+          }
+        : {
+              transform: "translateY(50px)",
+              opacity: "0",
+          };
 
     // Passing props form Layout to children component:
     //Create recursive Map on children.
@@ -105,7 +124,7 @@ export default function Layout({ children, ...pageProps }) {
             {childrenWithProps}
 
             {!cookiesConfirm && (
-                <div className="cookieWrap">
+                <div className="cookieWrap" style={renderAnimation}>
                     <p>
                         This website uses essential cookies to improve the user
                         experience.

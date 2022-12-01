@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import whatsAppLogo from "../public/assets/WhatsApp.webp";
 import gingioLogo from "../public/assets/gingio.png";
 import payPalLogo from "../public/assets/Paypal.png";
+import fmcLogoWhite from "../public/assets/logo-white.png";
 
 export default function Home({ scrollTop, width, height, isSmallDevice }) {
     const [animationReady, setAnimationReady] = useState(false);
@@ -99,7 +100,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                 <Image
                                     src={"/assets/logo.png"}
                                     width="240"
-                                    height="100"
+                                    height="95"
                                     alt="logo"
                                     className={styles.logo}
                                     style={renderAnimationA}
@@ -253,7 +254,16 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                 }
             >
                 <div>
-                    <div>LOGO</div>
+                    <div>
+                        <Image
+                            src={fmcLogoWhite}
+                            width="130"
+                            height="auto"
+                            // layout="fill"
+                            // objectFit="contain"
+                            alt="logo"
+                        />
+                    </div>
                     <span onClick={() => setOverSection(false)}>Close</span>
                 </div>
 

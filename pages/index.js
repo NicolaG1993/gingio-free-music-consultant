@@ -111,7 +111,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                 >
                                     Local and Global FREE First Class Music
                                     Consulting for Artists and music
-                                    Enterpreneurs.
+                                    Enterpreneurs
                                 </p>
                                 <p
                                     onClick={() => setOverSection("about")}
@@ -127,23 +127,22 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                 >
                                     Disclaimer
                                 </p>
+                                <span
+                                    className={styles.poweredBy}
+                                    style={renderAnimationA}
+                                >
+                                    POWERED BY
+                                    <Image
+                                        src={gingioLogo}
+                                        width="auto"
+                                        height="20"
+                                        alt="Gingio Logo"
+                                    />
+                                </span>
                             </div>
 
                             <div>
                                 <div>
-                                    <span
-                                        className={styles.poweredBy}
-                                        style={renderAnimationA}
-                                    >
-                                        POWERED BY
-                                        <Image
-                                            src={gingioLogo}
-                                            width="auto"
-                                            height="20"
-                                            alt="Gingio Logo"
-                                        />
-                                    </span>
-
                                     <a
                                         href="https://wa.me/13102806893 "
                                         target="_blank"

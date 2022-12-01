@@ -23,14 +23,14 @@
 
 #Home {
     background-image: url("/assets/bg-new.jpg");
-    background-position: left;
+    background-position: top left;
     background-size: cover;
     position: relative;
     height: 102vh;
 }
 
 #Home > .content {
-    padding: 2rem 3rem 2rem 3rem;
+    padding: 3rem 4rem 3rem 4rem;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -98,7 +98,7 @@
 #Home .navLink::after {
     content: "";
     display: block;
-    height: 3px;
+    height: 2px;
     width: 0%;
     background: white;
     transition: 0.5s ease-out;
@@ -114,13 +114,16 @@
 
 #Home > .content > div > div:nth-child(2) {
     /* display: flex;
-    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%; */
+    /* justify-content: space-between;
     align-items: center;
     flex-direction: column;
     width: 100%; */
 }
 #Home > .content > div > div:nth-child(2) > div {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -131,6 +134,8 @@
     align-items: center;
     font-size: 0.9em;
     /* margin: 120px 0 10px 0; */
+    margin: 0.5rem 0;
+    padding-bottom: 2px;
     /* margin-top: auto; */
     transition: 0.8s ease-out;
     transition-delay: 1.5s;
@@ -190,7 +195,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 2rem 3rem;
+    padding: 3rem 4rem;
     font-weight: lighter;
     letter-spacing: 1px;
 }

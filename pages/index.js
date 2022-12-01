@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import whatsAppLogo from "../public/assets/WhatsApp.webp";
+import gingioLogo from "../public/assets/gingio.png";
 import payPalLogo from "../public/assets/Paypal.png";
 
 export default function Home({ scrollTop, width, height, isSmallDevice }) {
@@ -125,12 +126,22 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                 >
                                     Disclaimer
                                 </p>
-                                <span style={renderAnimationA}>
-                                    POWERED BY GINGIO
-                                </span>
                             </div>
 
                             <div>
+                                <span
+                                    className={styles.poweredBy}
+                                    style={renderAnimationA}
+                                >
+                                    POWERED BY
+                                    <Image
+                                        src={gingioLogo}
+                                        width="auto"
+                                        height="23"
+                                        alt="Gingio Logo"
+                                    />
+                                </span>
+
                                 <a
                                     href="https://wa.me/13102806893 "
                                     target="_blank"

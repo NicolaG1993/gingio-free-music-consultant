@@ -15,6 +15,7 @@ export default function Layout({ children, ...pageProps }) {
     const { width, height } = useWindowDimensions();
     const { scrollTop } = useScrollPosition();
     const [isSmallDevice, setIsSmallDevice] = useState(false);
+    const [cookiesConfirm, setCookiesConfirm] = useState(false);
     useEffect(
         () => (width > 550 ? setIsSmallDevice(false) : setIsSmallDevice(true)),
         [width]
@@ -102,6 +103,18 @@ export default function Layout({ children, ...pageProps }) {
             <Header />
 
             {childrenWithProps}
+
+            {!cookiesConfirm && (
+                <div className="cookieWrap">
+                    <p>
+                        This website uses essential cookies to improve the user
+                        experience.
+                    </p>
+                    <button onClick={() => setCookiesConfirm(true)}>
+                        I understand
+                    </button>
+                </div>
+            )}
         </>
     );
 }

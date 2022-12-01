@@ -109,8 +109,8 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                     className={styles.description}
                                     style={renderAnimationB}
                                 >
-                                    FREE First Class Music Consulting for
-                                    Artists and music Enterpreneurs
+                                    FREE First Class Music Consulting service
+                                    for Artists and music Entrepreneurs
                                 </p>
                                 <div className={styles.list}>
                                     <p
@@ -118,7 +118,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                         className={styles.navLink}
                                         style={renderAnimationB}
                                     >
-                                        ABOUT US
+                                        • About us
                                     </p>
                                     <p
                                         onClick={() =>
@@ -127,7 +127,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                         className={styles.navLink}
                                         style={renderAnimationB}
                                     >
-                                        Disclaimer
+                                        • Disclaimer
                                     </p>
                                     <span
                                         className={styles.poweredBy}

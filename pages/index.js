@@ -10,7 +10,7 @@ import fmcLogoWhite from "../public/assets/logo-white.png";
 export default function Home({ scrollTop, width, height, isSmallDevice }) {
     const [animationReady, setAnimationReady] = useState(false);
     const [overSection, setOverSection] = useState(false);
-    const [chatButton, setChatButton] = useState(false);
+    const [chatButton, setChatButton] = useState(true);
 
     const [heading1Style, setHeading1Style] = useState(
         "heading-from-right-before"
@@ -159,7 +159,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                             className={styles.popout}
                                             style={
                                                 chatButton
-                                                    ? { width: "120px" }
+                                                    ? { width: "125px" }
                                                     : { width: "0" }
                                             }
                                         >

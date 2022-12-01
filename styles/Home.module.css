@@ -131,7 +131,7 @@
 }
 #Home .list > .navLink:nth-child(2) {
     /* font-weight: bold; */
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 #Home > .content > div > div:nth-child(2) {
@@ -157,7 +157,7 @@
     align-items: center;
     font-size: 0.6em;
     /* margin: 120px 0 10px 0; */
-    margin: 0.3rem 0 0rem 0;
+    /* margin: 0 0 0rem 0; */
     padding-bottom: 2px;
     /* margin-top: auto; */
     transition: 0.8s ease-out;

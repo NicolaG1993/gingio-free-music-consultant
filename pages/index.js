@@ -155,7 +155,9 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                             <Image
                                                 src={gingioLogo}
                                                 width="auto"
-                                                height="20"
+                                                height={
+                                                    width < 720 ? "15" : "20"
+                                                }
                                                 alt="Gingio Logo"
                                             />
                                         </a>

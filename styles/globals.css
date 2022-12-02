@@ -101,3 +101,21 @@ p {
     font-size: 2.5em;
     opacity: 1;
 }
+
+@media screen and (max-width: 680px) {
+    .cookieWrap {
+        width: 100%;
+        border-radius: 0px;
+
+        display: grid;
+        grid-template-columns: 1fr 130px;
+
+        padding: 2rem;
+        margin-bottom: 0;
+        font-size: 0.9em;
+    }
+
+    .cookieWrap span {
+        width: 115px;
+    }
+}

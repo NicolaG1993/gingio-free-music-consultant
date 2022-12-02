@@ -84,6 +84,12 @@
 .logo {
     transition: 0.5s ease-out;
 }
+.mobLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+}
 #Home > .content > div > div:nth-child(1) > img {
     margin-bottom: 20px;
     cursor: pointer;
@@ -396,6 +402,13 @@
 @media screen and (max-width: 720px) {
     #Home > .content {
         padding: 2rem;
+    }
+    #Home > .content > div > div:nth-child(1) {
+        max-width: 200px;
+        height: auto;
+    }
+    #Home .list {
+        margin-top: 2rem;
     }
     #OverSection {
         padding: 2rem 2rem 2rem 2rem;

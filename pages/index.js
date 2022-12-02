@@ -94,17 +94,30 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                 </Head>
 
                 <section className={styles.section} id={styles.Home}>
+                    {width < 720 && (
+                        <Image
+                            src={"/assets/logo.png"}
+                            width="140"
+                            height="55"
+                            alt="logo"
+                            className={styles.mobLogo}
+                            style={renderAnimationA}
+                        />
+                    )}
                     <div className={styles.content}>
                         <div>
                             <div>
-                                <Image
-                                    src={"/assets/logo.png"}
-                                    width="180"
-                                    height="70"
-                                    alt="logo"
-                                    className={styles.logo}
-                                    style={renderAnimationA}
-                                />
+                                {width >= 720 && (
+                                    <Image
+                                        src={"/assets/logo.png"}
+                                        width="180"
+                                        height="70"
+                                        alt="logo"
+                                        className={styles.logo}
+                                        style={renderAnimationA}
+                                    />
+                                )}
+
                                 <p
                                     className={styles.description}
                                     style={renderAnimationB}

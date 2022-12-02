@@ -383,10 +383,24 @@
     /* #Home {
         background-position: top left;
     } */
+
+    #OverSection {
+        padding: 4rem 3rem 3rem 3rem;
+        overflow-y: auto;
+    }
+    #OverSection > div:nth-child(1) {
+        margin-bottom: 3rem;
+    }
 }
 @media screen and (max-width: 720px) {
     #Home > .content {
         padding: 2rem;
+    }
+    #OverSection {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+    .about p {
+        font-size: 1em;
     }
 }
 
@@ -409,8 +423,29 @@
     .donations > div > a {
         margin-left: 0;
     }
+    #OverSection {
+        padding: 1rem 2rem;
+    }
+    #OverSection > div:nth-child(1) {
+        margin-bottom: 1rem;
+    }
+    .about {
+    }
+    .about p {
+        font-size: 0.95em;
+    }
 }
-@media screen and (max-width: 450px) and (min-device-height: 680px) and (orientation: portrait) {
+@media screen and (max-height: 500px) {
+    #Home > .content {
+        padding: 1rem;
+    }
+    #OverSection {
+        padding: 2rem;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 450px) and (min-device-height: 720px) and (orientation: portrait) {
     #Home {
         background-position: top left -350px;
     }

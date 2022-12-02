@@ -157,7 +157,11 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={styles.chat}
-                                        onMouseEnter={() => setChatButton(true)}
+                                        onMouseEnter={() =>
+                                            width > 460
+                                                ? setChatButton(true)
+                                                : setChatButton(false)
+                                        }
                                         onMouseLeave={() =>
                                             setChatButton(false)
                                         }

@@ -88,7 +88,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin: 1rem;
+    margin: 1rem 2rem;
 }
 #Home > .content > div > div:nth-child(1) > img {
     margin-bottom: 20px;
@@ -164,13 +164,17 @@
 #Home .poweredBy {
     display: flex;
     align-items: center;
-    font-size: 0.6em;
+    font-size: 0.7em;
     /* margin: 120px 0 10px 0; */
     /* margin: 0 0 0rem 0; */
     padding-bottom: 2px;
     margin-top: 0.3rem;
     transition: 0.8s ease-out;
     transition-delay: 1.5s;
+}
+
+#Home .poweredBy a {
+    height: 20px;
 }
 #Home .poweredBy img {
     margin-left: 0.5rem;
@@ -251,10 +255,12 @@
 /* SECTION 3 */
 
 .donations {
-    height: 400px;
+    /* height: 700px; */
+    height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
     width: 100%;
     padding: 2rem;
 }
@@ -410,6 +416,13 @@
     }
     #Home .list {
         margin-top: 2rem;
+    }
+
+    #Home .poweredBy a {
+        height: 15px;
+    }
+    #Home .poweredBy img {
+        margin-left: 5px;
     }
 
     .brandMission > p:nth-child(1) {

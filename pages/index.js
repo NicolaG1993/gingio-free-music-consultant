@@ -293,7 +293,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             onClick={() => setOverSection(false)}
                         />
                     </div>
-                    {/* <span onClick={() => setOverSection(false)}>Close</span> */}
+                    <span onClick={() => setOverSection(false)}>Close</span>
                 </div>
 
                 <div className={styles.about}>

@@ -315,6 +315,7 @@
     /* height: 100px; */
     width: 100%;
     margin-bottom: 6rem;
+    position: relative;
 }
 #OverSection > div:nth-child(1) > div:nth-child(1) {
     height: 50px;
@@ -324,6 +325,9 @@
     /* background: white; */
 }
 #OverSection > div:nth-child(1) > span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
     cursor: pointer;
     font-weight: bold;
 }

@@ -167,7 +167,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             </div>
 
                             <div>
-                                <div>
+                                {/* <div>
                                     <a
                                         href="https://wa.me/13102806893"
                                         target="_blank"
@@ -217,7 +217,13 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                             alt="WhatsApp Logo"
                                         />
                                     </a>
-                                </div>
+                                </div> */}
+
+                                <script
+                                    src="https://apps.elfsight.com/p/platform.js"
+                                    defer
+                                ></script>
+                                <div class="elfsight-app-275bd947-d416-419c-9cce-a228d094f8f0"></div>
                             </div>
                         </div>
 
@@ -302,31 +308,28 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             {/* <h3>ABOUT US</h3> */}
 
                             <p>
-                                CEO and Creative Designer Jannik Olander was
-                                born in the small country of Denmark. Though
-                                raised on the Danish countryside, he was
-                                fascinated with style, energy, and the arts from
-                                a young age. Through endeavors in the fashion
-                                industry he was able to refine a distinct style
-                                of beauty, quality, and spirituality. But it was
-                                not until he traveled to the Far East that
-                                Jannik truly gained the vision which inspired
-                                him to create the first piece of Nialaya
-                                Jewelry. Jannik visited a local bazaar on his
-                                first trip to India. While walking through the
-                                crowded market he was stopped by a local Shaman
-                                who asked to read his palm. The Shaman sat
-                                peacefully on a blanket made of yellow silk. The
-                                once smooth fabric was weathered and red dust
-                                covered parts of a once beautiful golden French
-                                lily. The Shaman’s honest eyes were a calm and
-                                piercing emerald green. Having felt a sincere
-                                and calm energy from the man, he decided to give
-                                him a few minutes of his time. He took a seat
-                                next to him. “First, tell me your name”, said
-                                the Shaman. They sat in silence as the Shaman
-                                looked deeply into Jannik’s eyes. He then began
-                                to examine his palm.
+                                FreeMusicConsulting.com is a FREE First Class
+                                Music Consulting service offered online to
+                                Artists, Bands, Engineers, Producers, Composers
+                                and Entrepreneurs. Powered by the international
+                                music consulting firm GINGIO who for the past 20
+                                years has been delivering superior consulting
+                                and coordination services to the global
+                                entertainment industry professionals looking for
+                                career direction as well as image, production,
+                                promotion, marketing, business management or
+                                expansion in general. GINGIO also features the
+                                largest database of international music industry
+                                contacts available in the market today. That is
+                                why we are happy to share &quot;a contact or
+                                two&quot; in the territory of interest from our
+                                4.2 million music industry professionals
+                                worldwide. The FMC Team assist people in need of
+                                a quick cost-free advice, tips and contacts in
+                                the music business locally as well as globally.
+                                Let&apos;s chat via WhatsApp - We Love to help
+                                music people in their career. Sometimes success
+                                is just one tip/contact away!
                             </p>
                         </>
                     )}

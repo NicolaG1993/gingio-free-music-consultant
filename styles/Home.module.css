@@ -486,6 +486,16 @@
         overflow-y: auto;
     }
 }
+@media screen and (min-width: 600px) and (max-width: 770px) and (min-height: 950px) {
+    #Home {
+        background-position: top center;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 600px) and (min-height: 950px) {
+    #Home {
+        background-position: top left -450px;
+    }
+}
 
 @media screen and (max-width: 450px) and (min-device-height: 720px) and (orientation: portrait) {
     #Home {

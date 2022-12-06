@@ -96,7 +96,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                 <section className={styles.section} id={styles.Home}>
                     {width < 720 && (
                         <Image
-                            src={"/assets/logoSubtitle.png"}
+                            src={"/assets/logo-white-subtitle.png"}
                             width="140"
                             height="65"
                             alt="logo"
@@ -109,7 +109,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             <div>
                                 {width >= 720 && (
                                     <Image
-                                        src={"/assets/logoSubtitle.png"}
+                                        src={"/assets/logo-white-subtitle.png"}
                                         width="180"
                                         height="80"
                                         alt="logo"
@@ -336,8 +336,24 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
 
                     {overSection === "disclaimer" && (
                         <>
-                            <h3>DISCLAIMER</h3>
-                            <p></p>
+                            {/* <h3>DISCLAIMER</h3> */}
+                            <p>
+                                Disclaimer of Liability The material and
+                                information contained on this website is for
+                                general information purposes only. You should
+                                not rely upon the material or information on the
+                                website as a basis for making any business,
+                                legal or any other decisions. Whilst we endeavor
+                                to keep the information up to date and correct,
+                                GINGIO makes no representations or warranties of
+                                any kind, express or implied about the
+                                completeness, accuracy, reliability, suitability
+                                or availability with respect to the website or
+                                the information, products, services or related
+                                graphics contained on the website for any
+                                purpose. Any reliance you place on such material
+                                is therefore strictly at your own risk.
+                            </p>
                         </>
                     )}
                 </div>

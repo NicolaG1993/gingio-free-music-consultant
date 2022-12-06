@@ -402,7 +402,7 @@
     } */
 
     #OverSection {
-        padding: 4rem 3rem 3rem 3rem;
+        padding: 4rem 3rem 4rem 3rem;
         overflow-y: auto;
     }
     #OverSection > div:nth-child(1) {
@@ -439,7 +439,7 @@
     }
 
     #OverSection {
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 2rem 2rem 4rem 2rem;
     }
     .about p {
         font-size: 1em;
@@ -466,7 +466,7 @@
         margin-left: 0;
     }
     #OverSection {
-        padding: 1rem 2rem;
+        padding: 2rem 2rem 4rem 2rem;
     }
     #OverSection > div:nth-child(1) {
         margin-bottom: 1rem;
@@ -482,7 +482,7 @@
         padding: 1rem;
     }
     #OverSection {
-        padding: 2rem;
+        padding: 2rem 2rem 4rem 2rem;
         overflow-y: auto;
     }
 }

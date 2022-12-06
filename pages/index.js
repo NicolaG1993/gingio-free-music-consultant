@@ -96,9 +96,9 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                 <section className={styles.section} id={styles.Home}>
                     {width < 720 && (
                         <Image
-                            src={"/assets/logo.png"}
+                            src={"/assets/logoSubtitle.png"}
                             width="140"
-                            height="55"
+                            height="65"
                             alt="logo"
                             className={styles.mobLogo}
                             style={renderAnimationA}
@@ -109,9 +109,9 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             <div>
                                 {width >= 720 && (
                                     <Image
-                                        src={"/assets/logo.png"}
+                                        src={"/assets/logoSubtitle.png"}
                                         width="180"
-                                        height="70"
+                                        height="80"
                                         alt="logo"
                                         className={styles.logo}
                                         style={renderAnimationA}
@@ -223,7 +223,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                     src="https://apps.elfsight.com/p/platform.js"
                                     defer
                                 ></script>
-                                <div class="elfsight-app-275bd947-d416-419c-9cce-a228d094f8f0"></div>
+                                <div className="elfsight-app-275bd947-d416-419c-9cce-a228d094f8f0"></div>
                             </div>
                         </div>
 
@@ -308,7 +308,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                             {/* <h3>ABOUT US</h3> */}
 
                             <p>
-                                FreeMusicConsulting.com is a FREE First Class
+                                FreeMusicConsultant.com is a FREE First Class
                                 Music Consulting service offered online to
                                 Artists, Bands, Engineers, Producers, Composers
                                 and Entrepreneurs. Powered by the international

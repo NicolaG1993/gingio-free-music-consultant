@@ -485,6 +485,15 @@
         padding: 2rem 2rem 6rem 2rem;
         overflow-y: auto;
     }
+    #Home > .content > div:nth-child(1) {
+        margin-bottom: 0;
+    }
+    #Home > .content > div > div:nth-child(1) > p {
+        font-size: 0.9em;
+    }
+    #Home > .content > div > div:nth-child(1) {
+        margin-bottom: 0;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 770px) and (min-height: 950px) {
     #Home {

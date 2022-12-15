@@ -82,11 +82,11 @@ export default function Layout({ children, ...pageProps }) {
                 />
                 <meta
                     name="description"
-                    content="FMC - Free Music Consultant"
+                    content="FMC • FREE First Class Music Consultant"
                 />
                 <meta
                     property="og:description"
-                    content="FMC - Free Music Consultant"
+                    content="FMC • FREE First Class Music Consultant"
                 />
 
                 <meta property="og:url" content="https://www.fmc.com" />

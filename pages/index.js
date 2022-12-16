@@ -143,6 +143,17 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                     >
                                         Disclaimer
                                     </p>
+
+                                    <a
+                                        className={styles.navLink}
+                                        style={renderAnimationB}
+                                        href="mailto:gm@gingio.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Contact
+                                    </a>
+
                                     <span
                                         className={styles.poweredBy}
                                         style={renderAnimationA}

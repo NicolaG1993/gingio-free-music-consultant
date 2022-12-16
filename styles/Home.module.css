@@ -111,9 +111,11 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 #Home .navLink {
     cursor: pointer;
-    font-size: 0.8em;
+    font-size: 0.7em;
+    /* font-size: 0.8em; */
     margin: 0.2rem 0;
     transition: 0.5s ease-out;
     transition-delay: 1.2s;
@@ -140,7 +142,7 @@
 }
 #Home .list > .navLink:nth-child(2) {
     /* font-weight: bold; */
-    font-size: 0.7em;
+    /* font-size: 0.7em; */
 }
 
 #Home > .content > div > div:nth-child(2) {

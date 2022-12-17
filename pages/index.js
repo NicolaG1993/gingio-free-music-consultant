@@ -147,7 +147,7 @@ export default function Home({ scrollTop, width, height, isSmallDevice }) {
                                     <a
                                         className={styles.navLink}
                                         style={renderAnimationB}
-                                        href="mailto:gm@gingio.com"
+                                        href="mailto:info@freemusicconsultant.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
